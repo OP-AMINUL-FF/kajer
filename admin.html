@@ -12,11 +12,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Supabase Library -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    
     <style>
-        /* আপনার আগের CSS ঠিক আছে */
         * {
             margin: 0;
             padding: 0;
@@ -68,7 +64,7 @@
             z-index: 1;
         }
 
-        /* Login Page */
+        /* ============ LOGIN PAGE ============ */
         .login-container {
             min-height: 100vh;
             display: flex;
@@ -154,7 +150,7 @@
             box-shadow: var(--shadow-lg);
         }
 
-        /* Admin Header */
+        /* ============ ADMIN PANEL STYLES ============ */
         .admin-header {
             background: var(--glass-bg);
             backdrop-filter: blur(20px);
@@ -198,7 +194,7 @@
             box-shadow: var(--shadow);
         }
 
-        /* Admin Menu */
+        /* ============ ADMIN MENU ============ */
         .admin-menu {
             background: var(--glass-bg);
             backdrop-filter: blur(20px);
@@ -241,7 +237,7 @@
             box-shadow: var(--shadow);
         }
 
-        /* Danger Zone */
+        /* ============ DANGER ZONE - DELETE ALL ============ */
         .danger-zone {
             background: linear-gradient(145deg, #fff1f0, #fee2e2);
             border: 2px solid var(--danger);
@@ -300,7 +296,7 @@
             font-size: 1.2rem;
         }
 
-        /* Cards */
+        /* ============ CARDS ============ */
         .admin-card {
             background: var(--glass-bg);
             backdrop-filter: blur(20px);
@@ -334,7 +330,7 @@
             color: var(--primary);
         }
 
-        /* Forms */
+        /* ============ FORMS ============ */
         .form-row {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -380,7 +376,7 @@
             font-size: 0.85rem;
         }
 
-        /* Buttons */
+        /* ============ BUTTONS ============ */
         .btn {
             padding: 14px 30px;
             border: none;
@@ -404,7 +400,7 @@
             box-shadow: var(--shadow-lg);
         }
 
-        /* Tables */
+        /* ============ TABLES ============ */
         .table-responsive {
             overflow-x: auto;
             margin-top: 20px;
@@ -452,7 +448,7 @@
             box-shadow: var(--shadow);
         }
 
-        /* Stats Cards */
+        /* ============ STATS CARDS ============ */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -487,7 +483,7 @@
             margin-bottom: 5px;
         }
 
-        /* Animations */
+        /* ============ ANIMATIONS ============ */
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
@@ -508,7 +504,7 @@
             50% { opacity: 0.95; }
         }
 
-        /* Notification */
+        /* ============ NOTIFICATION ============ */
         .notification {
             position: fixed;
             top: 30px;
@@ -540,7 +536,7 @@
             color: white;
         }
 
-        /* Logout Button */
+        /* ============ LOGOUT BUTTON ============ */
         .logout-btn {
             background: var(--gray);
             color: white;
@@ -560,7 +556,7 @@
             transform: translateY(-3px);
         }
 
-        /* Responsive */
+        /* ============ RESPONSIVE ============ */
         @media (max-width: 768px) {
             .admin-header {
                 flex-direction: column;
@@ -596,7 +592,7 @@
     </style>
 </head>
 <body>
-    <!-- Login Page -->
+    <!-- ============ LOGIN PAGE ============ -->
     <div id="loginPage" class="login-container">
         <div class="login-card">
             <div class="login-header">
@@ -615,7 +611,7 @@
         </div>
     </div>
 
-    <!-- Admin Panel -->
+    <!-- ============ ADMIN PANEL ============ -->
     <div id="adminPanel" style="display: none;">
         <div class="container">
             <!-- Admin Header -->
@@ -624,7 +620,7 @@
                     <h1 class="admin-title">
                         <i class="fas fa-crown"></i> Amar Kajer Hisab - Admin
                     </h1>
-                    <p style="color: var(--gray); margin-top: 10px;">OP Aminul FF | সম্পূর্ণ কন্ট্রোল প্যানেল | Supabase Live</p>
+                    <p style="color: var(--gray); margin-top: 10px;">OP Aminul FF | সম্পূর্ণ কন্ট্রোল প্যানেল</p>
                 </div>
                 <div style="display: flex; gap: 15px; align-items: center;">
                     <span class="admin-badge">
@@ -639,7 +635,7 @@
                 </div>
             </div>
 
-            <!-- Danger Zone -->
+            <!-- ============ DANGER ZONE - DELETE ALL OPTION ============ -->
             <div class="danger-zone">
                 <div>
                     <h3>
@@ -957,14 +953,10 @@
 
     <script>
         // ============================================
-        // ✅ Supabase Configuration - YOUR CREDENTIALS
+        // JSONBin Configuration - NO DATABASE, HARDCODED
         // ============================================
-        const SUPABASE_URL = 'https://rugqaklcfvboqzyjtmpw.supabase.co';
-        // 🔴 IMPORTANT: Admin Panel এ service_role key ব্যবহার করুন (একদম সিক্রেট)
-        const SUPABASE_SERVICE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ1Z3Fha2xjZnZib3F6eWp0bXB3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MDgyODI5MywiZXhwIjoyMDg2NDA0MjkzfQ.4qMv8y-VEGr_kB36zAVoo5qrfIsX98ZtHyP6LnSNtQI';
-        
-        // Supabase ক্লায়েন্ট তৈরি করুন (service_role key দিয়ে)
-        const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
+        const JSONBIN_MASTER_KEY = '$2a$10$c6gQbE3kkysRJOjb76hBY.tq2ZEUhP4ADwBVRYS0X5AhO2PCFdUEG';
+        const JSONBIN_BIN_ID = '698cdc6743b1c97be977824d';
         
         // ============================================
         // ADMIN PASSWORD - HARDCODED: 8859
@@ -1025,87 +1017,42 @@
             loadData();
         }
 
-        // ============ Supabase থেকে ডাটা লোড (service_role key) ============
+        // ============ JSONBin FUNCTIONS ============
         async function loadData() {
             try {
-                console.log('📡 Admin Panel - Supabase থেকে ডাটা লোড হচ্ছে...');
-                
-                const { data, error } = await supabase
-                    .from('app_data')
-                    .select('content')
-                    .eq('id', 1)
-                    .single();
-                    
-                if (error) throw error;
-                
-                if (data) {
-                    appData = data.content;
-                    
-                    // ডাটা স্ট্রাকচার চেক করুন
+                const response = await fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_BIN_ID}/latest`, {
+                    headers: { 'X-Master-Key': JSONBIN_MASTER_KEY }
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    appData = data.record;
                     if (!appData.companyPayments) appData.companyPayments = [];
                     if (!appData.payments) appData.payments = [];
-                    if (!appData.offers) appData.offers = [];
                     if (!appData.profile) appData.profile = {};
-                    if (!appData.entries) appData.entries = [];
-                    
-                    console.log('✅ ডাটা লোড হয়েছে:', appData);
-                    updateAdminUI();
-                    showAdminNotification('✅ ডাটা লোড হয়েছে', 'success');
                 }
-                
             } catch (error) {
-                console.error('❌ লোড করতে পারেনি:', error);
-                showAdminNotification('❌ ডাটা লোড করতে পারেনি', 'error');
-                
-                // লোকাল স্টোরেজ থেকে লোড
                 const saved = localStorage.getItem('amarKajerHisabAdmin');
-                if (saved) {
-                    appData = JSON.parse(saved);
-                    updateAdminUI();
-                    showAdminNotification('⚠️ লোকাল স্টোরেজ থেকে লোড হয়েছে', 'warning');
-                }
+                if (saved) appData = JSON.parse(saved);
             }
+            updateAdminUI();
         }
 
-        // ============ Supabase এ ডাটা সেভ (service_role key) ============
         async function saveData() {
             try {
-                console.log('📤 Admin Panel - Supabase এ ডাটা সেভ হচ্ছে...');
-                
-                // আপডেটের সময় যোগ করুন
-                if (appData.profile) {
-                    appData.profile.updatedAt = new Date().toISOString();
-                }
-                
-                const { error } = await supabase
-                    .from('app_data')
-                    .update({ 
-                        content: appData,
-                        updated_at: new Date().toISOString()
-                    })
-                    .eq('id', 1);
-                    
-                if (error) throw error;
-                
-                console.log('✅ ডাটা সেভ হয়েছে');
-                
-                // লোকাল স্টোরেজে ব্যাকআপ
-                localStorage.setItem('amarKajerHisabAdmin', JSON.stringify(appData));
-                
-                showAdminNotification('✅ ডাটা সেভ হয়েছে', 'success');
-                return true;
-                
-            } catch (error) {
-                console.error('❌ সেভ করতে পারেনি:', error);
-                showAdminNotification('❌ সেভ করতে পারেনি', 'error');
-                
-                // শুধু লোকাল স্টোরেজে সেভ
-                localStorage.setItem('amarKajerHisabAdmin', JSON.stringify(appData));
-                return false;
-            }
+                await fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_BIN_ID}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Master-Key': JSONBIN_MASTER_KEY
+                    },
+                    body: JSON.stringify(appData)
+                });
+            } catch (error) {}
+            localStorage.setItem('amarKajerHisabAdmin', JSON.stringify(appData));
         }
 
-        // ============ DELETE ALL DATA ============
+        // ============ DELETE ALL DATA - COMPLETE RESET ============
         function confirmDeleteAll() {
             if (confirm('⚠️ সতর্কতা! সম্পূর্ণ ডাটা ডিলিট হবে!\n\nএন্ট্রি, পেমেন্ট, কোম্পানি পেমেন্ট সব মুছে যাবে।\n\nআপনি কি নিশ্চিত?')) {
                 deleteAllData();
@@ -1143,7 +1090,7 @@
         // ============ CALCULATE BALANCE ============
         function calculateBalance() {
             let totalEarned = 0;
-            (appData.entries || []).forEach(e => totalEarned += e.total_amount || 0);
+            appData.entries.forEach(e => totalEarned += e.total_amount || 0);
             
             let totalCompanyPaid = 0;
             if (appData.companyPayments) {
@@ -1355,14 +1302,14 @@
             const balance = calculateBalance();
             
             let totalAmount = 0, totalPieces = 0;
-            (appData.entries || []).forEach(e => {
+            appData.entries.forEach(e => {
                 totalAmount += e.total_amount || 0;
                 totalPieces += e.total_pieces || 0;
             });
 
             document.getElementById('adminTotalAmount').innerHTML = `৳${totalAmount.toLocaleString()}`;
             document.getElementById('adminTotalPieces').innerHTML = totalPieces.toLocaleString();
-            document.getElementById('adminTotalDays').innerHTML = (appData.entries || []).length;
+            document.getElementById('adminTotalDays').innerHTML = appData.entries.length;
             document.getElementById('adminCurrentBalance').innerHTML = `৳${balance.balance.toLocaleString()}`;
             
             document.getElementById('adminTotalEarned').innerHTML = `৳${balance.earned.toLocaleString()}`;
@@ -1380,7 +1327,7 @@
         function updateRecentEntriesAdmin() {
             let html = '<table class="admin-table"><tr><th>তারিখ</th><th>প্যান</th><th>শার্ট</th><th>ড্র</th><th>পিস</th><th>টাকা</th><th>অ্যাকশন</th></tr>';
             
-            (appData.entries || []).slice(0, 10).forEach(e => {
+            appData.entries.slice(0, 10).forEach(e => {
                 const date = new Date(e.date);
                 html += `<tr>
                     <td>${date.toLocaleDateString('bn-BD')}</td>
@@ -1403,7 +1350,7 @@
         function updateAllEntriesAdmin() {
             let html = '<table class="admin-table"><tr><th>তারিখ</th><th>প্যান</th><th>শার্ট</th><th>34-38</th><th>20-30</th><th>14-18</th><th>ড্র</th><th>পিস</th><th>টাকা</th><th>অ্যাকশন</th></tr>';
             
-            (appData.entries || []).forEach(e => {
+            appData.entries.forEach(e => {
                 const date = new Date(e.date);
                 html += `<tr>
                     <td>${date.toLocaleDateString('bn-BD')}</td>
@@ -1429,7 +1376,7 @@
         function updatePaymentsAdmin() {
             let allTransactions = [];
             
-            (appData.entries || []).forEach(e => {
+            appData.entries.forEach(e => {
                 allTransactions.push({
                     date: e.date,
                     type: 'আয়',
@@ -1507,7 +1454,7 @@
         function updateHistoryAdmin() {
             let html = '<table class="admin-table"><tr><th>তারিখ</th><th>প্যান</th><th>শার্ট</th><th>34-38</th><th>20-30</th><th>14-18</th><th>ড্র</th><th>পিস</th><th>টাকা</th></tr>';
             
-            (appData.entries || []).forEach(e => {
+            appData.entries.forEach(e => {
                 const date = new Date(e.date);
                 html += `<tr>
                     <td>${date.toLocaleDateString('bn-BD')}</td>

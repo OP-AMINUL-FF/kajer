@@ -21,7 +21,7 @@
     
     <!-- Open Graph / Facebook - Rich Preview -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://youraccount.github.io/amar-kajer-hisab/">
+    <meta property="og:url" content="https://op-aminul-ff.github.io/kajer/">
     <meta property="og:title" content="আমার কাজের হিসাব | OP Aminul FF">
     <meta property="og:description" content="পেশাদার লন্ড্রি ও আয়রন ব্যবসার সম্পূর্ণ ডিজিটাল হিসাব সিস্টেম। রিয়েল-টাইম আপডেট, অটো ক্যালকুলেশন, স্মার্ট ট্র্যাকিং।">
     <meta property="og:image" content="https://ui-avatars.com/api/?name=OP+Aminul+FF&background=667eea&color=fff&size=512&bold=true">
@@ -32,14 +32,14 @@
     
     <!-- Twitter Card - Professional -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://youraccount.github.io/amar-kajer-hisab/">
+    <meta name="twitter:url" content="https://op-aminul-ff.github.io/kajer/">
     <meta name="twitter:title" content="আমার কাজের হিসাব | OP Aminul FF">
     <meta name="twitter:description" content="পেশাদার লন্ড্রি ও আয়রন ব্যবসার সম্পূর্ণ ডিজিটাল হিসাব সিস্টেম">
     <meta name="twitter:image" content="https://ui-avatars.com/api/?name=OP+Aminul+FF&background=667eea&color=fff&size=512">
     <meta name="twitter:creator" content="@opaminulff">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://youraccount.github.io/amar-kajer-hisab/">
+    <link rel="canonical" href="https://op-aminul-ff.github.io/kajer/">
     
     <!-- Favicon & Icons - Professional -->
     <link rel="icon" type="image/png" sizes="32x32" href="https://ui-avatars.com/api/?name=AKH&background=667eea&color=fff&size=32">
@@ -52,9 +52,6 @@
     
     <!-- Google Fonts - Professional Typography -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Supabase Library -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     
     <style>
         /* ============ CSS RESET & VARIABLES ============ */
@@ -482,15 +479,6 @@
             bottom: 0;
             background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.3), transparent 70%);
             animation: pulse 2s infinite;
-        }
-
-        .tab-content {
-            display: none;
-            animation: fadeInUp 0.5s ease;
-        }
-
-        .tab-content.active {
-            display: block;
         }
 
         /* ============ CARDS - GLASSMORPHISM ============ */
@@ -1585,33 +1573,20 @@
                 
                 <!-- Info Message - Glass Effect -->
                 <div class="info-message">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>টাকা নেওয়ার কাজ অ্যাডমিন প্যানেল থেকে করতে হবে। ইউজার প্যানেল শুধু দেখার জন্য।</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <div class="footer">
-            <p>© ২০২৬ আমার কাজের হিসাব • OP Aminul FF</p>
-            <p style="font-size: 0.8rem; margin-top: 8px; opacity: 0.9;">সম্পূর্ণ বিনামূল্যে | রিয়েল-টাইম আপডেট</p>
-        </div>
-    </div>
-
-    <!-- Notification -->
+                    <i class="fas fa-shield-hal
+                    
+                    
+                        <!-- Notification -->
     <div class="notification" id="notification"></div>
 
     <script>
         // ============================================
-        // ✅ Supabase Configuration - আপনার দেওয়া Keys
+        // ✅ JSONBin Configuration - From 'use this.html'
         // ============================================
-        const SUPABASE_URL = 'https://rugqaklcfvboqzyjtmpw.supabase.co';
-        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ1Z3Fha2xjZnZib3F6eWp0bXB3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA4MjgyOTMsImV4cCI6MjA4NjQwNDI5M30.Y-V__YshBgjE7pHTNNPfyh5WJmD9eMguloPPcsmf4MQ';
+        const JSONBIN_MASTER_KEY = '$2a$10$c6gQbE3kkysRJOjb76hBY.tq2ZEUhP4ADwBVRYS0X5AhO2PCFdUEG';
+        const JSONBIN_BIN_ID = '698cdc6743b1c97be977824d';
         
-        // Supabase ক্লায়েন্ট তৈরি করুন
-        const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-        
-        // Products & Rates - ১০০% আগের মতো
+        // Products & Rates - From 'use this.html'
         const PRODUCTS = [
             { id: 'panjabi', name: 'প্যানজাবি', rate: 7, icon: 'fa-vest' },
             { id: 'shirt', name: 'শার্ট', rate: 5, icon: 'fa-tshirt' },
@@ -1621,7 +1596,7 @@
             { id: 'drawjar', name: 'ড্রজার', rate: 3, icon: 'fa-tshirt' }
         ];
 
-        // App Data - ১০০% আগের মতো
+        // App Data
         let appData = {
             entries: [],
             profile: {
@@ -1632,7 +1607,7 @@
                 location: 'ঢাকা, বাংলাদেশ',
                 agreementDays: 30,
                 agreementStart: '2024-01-01',
-                bio: 'পেশাদার লন্ড্রি ও পোশাক প্রসেসিং বিশেষজ্ঞ। ৫+ বছর অভিজ্ঞতা۔'
+                bio: 'পেশাদার লন্ড্রি ও পোশাক প্রসেসিং বিশেষজ্ঞ। ৫+ বছর অভিজ্ঞতা।'
             },
             payments: [],
             companyPayments: []
@@ -1644,62 +1619,43 @@
             startLiveProgress();
         });
 
-        // ============ LOAD DATA FROM SUPABASE (JSONBin মুক্ত) ============
+        // ============ LOAD DATA FROM JSONBin ============
         async function loadData() {
             try {
-                console.log('📡 Supabase থেকে ডাটা লোড হচ্ছে...');
-                
-                const { data, error } = await supabase
-                    .from('app_data')
-                    .select('content')
-                    .eq('id', 1)
-                    .single();
-                    
-                if (error) throw error;
-                
-                if (data) {
-                    appData = data.content;
-                    
-                    // ডাটা স্ট্রাকচার চেক করুন
-                    if (!appData.entries) appData.entries = [];
+                const response = await fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_BIN_ID}/latest?t=${Date.now()}`, {
+                    headers: { 
+                        'X-Master-Key': JSONBIN_MASTER_KEY,
+                        'X-Bin-Meta': 'false'
+                    }
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    appData = data;
                     if (!appData.companyPayments) appData.companyPayments = [];
                     if (!appData.payments) appData.payments = [];
-                    if (!appData.profile) appData.profile = {};
-                    
-                    console.log('✅ ডাটা লোড হয়েছে:', appData);
                     updateAllUI();
                     showNotification('✅ ডাটা লোড হয়েছে');
+                } else {
+                    loadFromLocalStorage();
                 }
-                
             } catch (error) {
-                console.error('❌ লোড করতে পারেনি:', error);
-                showNotification('❌ ডাটা লোড করতে পারেনি', 'error');
-                
-                // লোকাল স্টোরেজ থেকে লোড (ব্যাকআপ)
-                const saved = localStorage.getItem('amarKajerHisabUser');
-                if (saved) {
-                    appData = JSON.parse(saved);
-                    updateAllUI();
-                    showNotification('⚠️ লোকাল স্টোরেজ থেকে লোড হয়েছে');
-                }
+                console.error('Load error:', error);
+                loadFromLocalStorage();
             }
         }
 
-        // ============ রিয়েল-টাইম আপডেট (অটো রিফ্রেশ) ============
-        supabase
-            .channel('app_data_changes')
-            .on('postgres_changes', {
-                event: 'UPDATE',
-                schema: 'public',
-                table: 'app_data',
-                filter: 'id=eq.1'
-            }, payload => {
-                console.log('🔄 রিয়েল-টাইম আপডেট পাওয়া গেছে!');
-                appData = payload.new.content;
+        // ============ FALLBACK: LOCAL STORAGE ============
+        function loadFromLocalStorage() {
+            const saved = localStorage.getItem('amarKajerHisabUser');
+            if (saved) {
+                appData = JSON.parse(saved);
+                if (!appData.companyPayments) appData.companyPayments = [];
+                if (!appData.payments) appData.payments = [];
                 updateAllUI();
-                showNotification('🔄 রিয়েল-টাইম আপডেট!');
-            })
-            .subscribe();
+                showNotification('⚠️ লোকাল স্টোরেজ থেকে লোড হয়েছে');
+            }
+        }
 
         // ============ CALCULATE BALANCE ============
         function calculateBalance() {
